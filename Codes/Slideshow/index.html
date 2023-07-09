@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <div class="image-slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+        <div class="image-slider__content" x-ref="slider"
+            x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Dress.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 1</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/2.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 2</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/3.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 3</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/4.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 4</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/ahmed-ghanem-21F4hU6YPPM-unsplash.jpg"
+                    alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 5</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image"
+                    src="Image/Products/mohamadreza-khashay-u4QLOLG1OKA-unsplash.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 6</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/1.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 7</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/1.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 8</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Trend/Dress.jpg" alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 9</h2>
+                </div>
+            </div>
+            <div class="image-slider__item">
+                <img class="image-slider__image" src="Image/Products/photo-1515372039744-b8f02a3ae446.avif"
+                    alt="Image">
+                <div class="image-slider__info">
+                    <h2>Card 10</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
